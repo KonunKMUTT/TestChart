@@ -15,3 +15,4 @@ ext_data = ext_data.dropna(how="all")
 st.dataframe(ext_data)
 
 st.bar_chart(ext_data["class")
+st.stop()
