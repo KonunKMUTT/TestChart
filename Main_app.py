@@ -5,7 +5,7 @@ from streamlit_gsheets import GSheetsConnection
 import numpy as np
 
 # เชื่อมต่อกับ Google Sheets
-conn = st.experimental_connection("gsheets", type=GSheetsConnection)
+conn = st.connection("gsheets", type=GSheetsConnection)
 
 # อ่านข้อมูลจาก Google Sheets
 ext_data = conn.read(wroksheet="Sheet1", usecols=list(range(10)), ttl=5)
