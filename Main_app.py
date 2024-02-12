@@ -3,6 +3,7 @@ import streamlit as st
 import matplotlib.pyplot as plt
 from streamlit_gsheets import GSheetsConnection
 import numpy as np
+import seaborn as sns
 
 # เชื่อมต่อกับ Google Sheets
 conn = st.experimental_connection("gsheets", type=GSheetsConnection)
@@ -14,4 +15,5 @@ ext_data = conn.read(wroksheet="Sheet1", usecols=list(range(10)), ttl=5)
 ext_data = ext_data.dropna(how="all")
 st.dataframe(ext_data)
 
-st.scatter_chart(ext_data["class"])
+sns.countplot(x = ext_data["female", data = ext_data]
+st.plot()
