@@ -31,12 +31,5 @@ sns.countplot(x="female", hue="class", data=ext_data, palette="hls", ax=ax)
 # เปลี่ยนชื่อแกน x
 ax.set_xlabel("Gender")
 
-# เปลี่ยนชื่อ label บนแท่ง
-for p in ax.patches:
-    percentage = f"{p.get_height():.1f}%"
-    x = p.get_bbox().get_x() + p.get_width() / 2
-    y = p.get_bbox().get_y() + p.get_height()
-    ax.annotate(percentage, (x, y))
-
 # แสดงกราฟ
 st.pyplot(fig)
