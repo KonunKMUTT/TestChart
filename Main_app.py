@@ -14,17 +14,5 @@ ext_data = conn.read(wroksheet="Sheet1", usecols=list(range(10)), ttl=5)
 ext_data = ext_data.dropna(how="all")
 st.dataframe(ext_data)
 
-# แยกข้อมูล Class และ Age
-classes = ext_data["class"]
-ages = ext_data["age"]
-
-# วาด Line chart แยกตาม Class
-for i in range(len(classes)):
-    plt.plot(ages, classes[i], label=f"class {i}")
-
-plt.xlabel("Age")
-plt.ylabel("Class")
-plt.legend()
-
-# แสดง Line chart บน Streamlit
-st.pyplot(plt)
+df = st.dataframe(ext_data) , columns = ["Class" , "Age"]
+st.line_chart(df)
