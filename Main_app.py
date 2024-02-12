@@ -16,5 +16,5 @@ ext_data = ext_data.dropna(how="all")
 st.dataframe(ext_data)
 
 fig = plt.figure(figsize=(6,6))
-sns.countplot(x = ext_data["female"] ,hue=ext_data["class"], data = ext_data)
+sns.countplot(x = ext_data["female","male"] ,hue=ext_data["class"], data = ext_data)
 st.pyplot(fig)
