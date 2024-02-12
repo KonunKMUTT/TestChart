@@ -1,6 +1,7 @@
 import pandas as pd
 import streamlit as st
 import matplotlib.pyplot as plt
+import matplotlib.patches as mpatches  # Add this if it's missing
 from streamlit_gsheets import GSheetsConnection
 import numpy as np
 import seaborn as sns
