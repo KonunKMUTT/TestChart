@@ -13,7 +13,6 @@ ext_data = conn.read(wroksheet="Sheet1", usecols=list(range(10)), ttl=5)
 
 # ลบข้อมูล NaN ทั้งหมด
 ext_data = ext_data.dropna(how="all")
-st.dataframe(ext_data)
 
 fig = plt.figure(figsize=(6,6))
 sns.countplot(x = ext_data[["female"] == 1] ,hue = ext_data["class"], data = ext_data)
