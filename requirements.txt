@@ -1,2 +1,5 @@
 scikit-learn==1.2.2
 pandas
+streamlit
+st-gsheets-connection
+matplotlib
