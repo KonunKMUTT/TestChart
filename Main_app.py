@@ -14,17 +14,17 @@ ext_data = conn.read(wroksheet="Sheet1", usecols=list(range(10)), ttl=5)
 ext_data = ext_data.dropna(how="all")
 st.dataframe(ext_data)
 
-# แยกข้อมูล Class, Female และ Male
+# แยกข้อมูล Class และ Age
 classes = ext_data["class"]
-females = ext_data["female"]
-males = ext_data["male"]
+ages = ext_data["age"]
 
-# วาด Bar chart
-plt.bar(classes, females, label="Female")
-plt.bar(classes, males, bottom=females, label="Male")
-plt.xlabel("Class")
-plt.ylabel("จำนวน")
+# วาด Line chart แยกตาม Class
+for i in range(len(classes)):
+    plt.plot(ages, classes[i], label=f"class {i}")
+
+plt.xlabel("Age")
+plt.ylabel("Class")
 plt.legend()
 
-# แสดง Bar chart บน Streamlit
+# แสดง Line chart บน Streamlit
 st.pyplot(plt)
