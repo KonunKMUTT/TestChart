@@ -15,5 +15,5 @@ ext_data = conn.read(wroksheet="Sheet1", usecols=list(range(10)), ttl=5)
 ext_data = ext_data.dropna(how="all")
 st.dataframe(ext_data)
 
-sns.countplot(x = ext_data["female"] , data = ext_data)
+sns.countplot(x = ext_data["female"] ,hue=ext_data["class"], data = ext_data)
 st.pyplot()
