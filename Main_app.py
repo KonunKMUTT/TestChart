@@ -14,4 +14,4 @@ ext_data = conn.read(wroksheet="Sheet1", usecols=list(range(10)), ttl=5)
 ext_data = ext_data.dropna(how="all")
 st.dataframe(ext_data)
 
-st.line_chart(x = ext_data["class"], y = ext_data["age"])
+st.line_chart(data=ext_data , x = ext_data["class"], y = ext_data["age"])
