@@ -16,4 +16,4 @@ ext_data = ext_data.dropna(how="all")
 st.dataframe(ext_data)
 
 sns.countplot(x = ext_data["female"] , data = ext_data)
-st.plot()
+st.pyplot
