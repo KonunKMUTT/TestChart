@@ -13,3 +13,5 @@ ext_data = conn.read(wroksheet="Sheet1", usecols=list(range(10)), ttl=5)
 # ลบข้อมูล NaN ทั้งหมด
 ext_data = ext_data.dropna(how="all")
 st.dataframe(ext_data)
+
+st.bar_chart(ext_data["class")
