@@ -33,3 +33,4 @@ ax.set_xlabel("Gender")
 
 # แสดงกราฟ
 st.pyplot(fig)
+conn.stop()
