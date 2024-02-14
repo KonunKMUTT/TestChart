@@ -26,10 +26,10 @@ ext_data["Male %"] = (ext_data["female"] == "Male") * (100 / total_male)
 
 # สร้างกราฟ Count Plot
 fig, ax = plt.subplots(figsize=(6, 6))
-sns.countplot(y="female", hue="class", data=ext_data, palette="hls", ax=ax)
+sns.countplot(y="female", hue="class", data=ext_data, ax=ax)
 
 # เปลี่ยนชื่อแกน x
-ax.set_xlabel("Gender")
+ax.set_ylabel("Gender")
 
 # แสดงกราฟ
 st.pyplot(fig)
